@@ -10,7 +10,7 @@ RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Cen
     sed -i -e '/mirrors.cloud.aliyuncs.com/d' -e '/mirrors.aliyuncs.com/d' /etc/yum.repos.d/CentOS-Base.repo && \
     curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 RUN yum makecache
-
+RUN yum -y install wget 
 WORKDIR /root
 
 RUN yum install cmake make gcc gcc-c++ flex bison libpcap-devel \
