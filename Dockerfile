@@ -23,8 +23,8 @@ RUN wget -c -N https://code.aliyun.com/rapidinstant/ids-tools/raw/master/datas/z
     cd zeek && ./configure && make && make install
 
 
-FROM centos:centos7.6.1810
-LABEL maintainer="actanble@gmail.com"
+#FROM centos:centos7.6.1810
+#LABEL maintainer="actanble@gmail.com"
 
-COPY --from=build /usr/local/zeek  /usr/local/zeek
+#COPY --from=build /usr/local/zeek  /usr/local/zeek
 
