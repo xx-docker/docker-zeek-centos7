@@ -19,6 +19,7 @@ RUN yum install centos-release-scl -y && \
   yum install devtoolset-7 -y && \
   scl enable devtoolset-7 bash
 RUN wget -c -N https://code.aliyun.com/rapidinstant/ids-tools/raw/master/datas/zeek-322.tar.gz && \
+	tar xf zeek-322.tar.gz && \
     cd zeek && ./configure && make && make install
 
 
